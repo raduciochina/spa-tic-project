@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{title}}</h1>
-        <Button @show-add-user="$emit('show-add-user')" text="Add User" color="green" />
+        <Button @btn-click="$emit('show-add-user')" :text="showAddUser ? 'Close' : 'Add User'" :color="showAddUser ? 'red' : 'green'" />
     </header>
 </template>
 
@@ -11,6 +11,7 @@ import Button from './Button.vue';
         name: 'UserHeader',
         props:{
             title: String,
+            showAddUser: Boolean,
         },
     components: {
     Button,

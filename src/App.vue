@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <UserHeader @show-add-user="toggleAddUser()" title="User Management"/>
+    <UserHeader @show-add-user="toggleAddUser()" title="User Management" :showAddUser = "showAddUser"/>
     <div v-if="showAddUser">
       <AddUser @add-user='addUser'/>
     </div>

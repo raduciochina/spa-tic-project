@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     onClick() {
-        this.$emit("show-add-user");
+        this.$emit("btn-click");
     },
   },
 };
